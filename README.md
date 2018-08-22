@@ -1,3 +1,11 @@
+# divegili
+
+this site aims to keep people informed of the dives available each day in the Gili Isles
+
+We also aim to keep a record of those dives done for historical records (and holiday memories).
+
+================================================================================================= 
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
