@@ -24,6 +24,21 @@ it('has a list of areas', () => {
 	expect(areas.length>0).toEqual(true);
 });
 
+it('has clickable links for areas', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    var areas = div.getElementsByClassName("diving-area-li")
+    expect(areas != null).toEqual(true);
+    expect(areas.length > 0).toEqual(true);
+    for(var i=0;i<areas.length;i++) {
+		var vale = areas[i]
+		expect(vale).toEqual(expect.anything())
+        expect(vale.firstChild.tagName).toEqual("A");
+        expect(vale.firstChild.getAttribute("href")).toEqual(expect.anything())
+    }
+
+});
+
 it('has hidden areas on startup', () => {
 	const div = document.createElement('div');
 	ReactDOM.render(<App />,div);
@@ -38,4 +53,5 @@ it("has dive shops in areas", () => {
     ReactDOM.render(<App />, div);
     var areas = div.getElementsByClassName("diving-area")
     expect((areas[0].getElementsByClassName("diving-shop")).length).toEqual(1);
-  });
+});
+

@@ -15,9 +15,9 @@ class App extends Component {
                     <h1 className="App-title">Dive Gili</h1>
                 </header>
                 <ul className="diving-area-list">
-                    <li className="diving-area-li">AREA 1</li>
-                    <li className="diving-area-li">AREA 1</li>
-                    <li className="diving-area-li">AREA 1</li>
+                    <li className="diving-area-li"><a href="#"> AREA 1</a></li>
+                    <li className="diving-area-li"><a href="#">AREA 1</a></li>
+                    <li className="diving-area-li"><a href="#">AREA 1</a></li>
                 </ul>
 
                 <div className="diving-area" style={style} >

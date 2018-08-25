@@ -1,0 +1,3 @@
+C:\Users\Tyeth\documents\repos\react\dive-gili\obj\Debug\dive-gili.njsprojAssemblyReference.cache
+C:\Users\Tyeth\documents\repos\react\dive-gili\obj\Debug\dive-gili.njsproj.CoreCompileInputs.cache
+C:\Users\Tyeth\documents\repos\react\dive-gili\bin\Microsoft.NodejsTools.WebRole.dll
