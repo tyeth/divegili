@@ -36,7 +36,15 @@ it('has clickable links for areas', () => {
         expect(vale.firstChild.tagName).toEqual("A");
         expect(vale.firstChild.getAttribute("href")).toEqual(expect.anything())
     }
+});
 
+it('has a blurb with content and class', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    var sut = div.getElementsByClassName("diving-blurb")
+    expect(sut != null).toEqual(true);
+    expect(sut.length).toBeGreaterThan(0);
+    expect(sut[0].textContent.length).toBeGreaterThan(0);
 });
 
 it('has hidden areas on startup', () => {

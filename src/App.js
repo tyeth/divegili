@@ -6,9 +6,13 @@ const style = {
 };
 
 class App extends Component {
+    constructor(props) {
+        super(props);
 
+    }
     render() {
         return (
+
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
@@ -19,7 +23,9 @@ class App extends Component {
                     <li className="diving-area-li"><a href="#">AREA 1</a></li>
                     <li className="diving-area-li"><a href="#">AREA 1</a></li>
                 </ul>
-
+                <div className="diving-blurb">
+                    Blah Blah
+                </div>
                 <div className="diving-area" style={style} >
                     <div className="diving-shop">
                         <span className="diving-shop-title">DIVE SHOP NAME</span>
@@ -31,5 +37,11 @@ class App extends Component {
         );
     }
 }
+
+App.defaultProps = {
+    areas: {
+        "Area 1":  [{name:"shop 1"}], "Area 2":[]},
+   
+};
 
 export default App;
