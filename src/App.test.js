@@ -19,7 +19,23 @@ it('has correct heading', ()=> {
 it('has a list of areas', () => {
 	const div = document.createElement('div');
 	ReactDOM.render(<App />,div);
-	var areas = div.getElementsByClassName("diving-area")
+	var areas = div.getElementsByClassName("diving-area-li")
 	expect(areas!=null).toEqual(true);
 	expect(areas.length>0).toEqual(true);
 });
+
+it('has hidden areas on startup', () => {
+	const div = document.createElement('div');
+	ReactDOM.render(<App />,div);
+	var areas = div.getElementsByClassName("diving-area")
+	expect(areas!=null).toEqual(true);
+    expect(areas.length > 0).toEqual(true);
+    expect(areas[0].style.visibility).toEqual("hidden");//.toHaveProperty('style', { "visibility": "hidden" })
+});
+
+it("has dive shops in areas", () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    var areas = div.getElementsByClassName("diving-area")
+    expect((areas[0].getElementsByClassName("diving-shop")).length).toEqual(1);
+  });
