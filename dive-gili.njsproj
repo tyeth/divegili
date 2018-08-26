@@ -54,6 +54,14 @@
       <Publish>False</Publish>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\DivingShop.jsx" />
+    <Compile Include="src\DivingAreasList.jsx" />
+    <Compile Include="src\DivingArea.jsx" />
+    <Compile Include="src\DivingAreas.jsx">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

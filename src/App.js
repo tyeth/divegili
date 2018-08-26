@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import DivingAreas from './DivingAreas';
+import DivingAreasList from './DivingAreasList';
 import './App.css';
 const style = {
     visibility: "hidden"
@@ -18,30 +20,36 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Dive Gili</h1>
                 </header>
-                <ul className="diving-area-list">
-                    <li className="diving-area-li"><a href="#"> AREA 1</a></li>
-                    <li className="diving-area-li"><a href="#">AREA 1</a></li>
-                    <li className="diving-area-li"><a href="#">AREA 1</a></li>
-                </ul>
+                <DivingAreasList areas={this.props.areas} />
                 <div className="diving-blurb">
                     Blah Blah
                 </div>
-                <div className="diving-area" style={style} >
-                    <div className="diving-shop">
-                        <span className="diving-shop-title">DIVE SHOP NAME</span>
-                        <span className="diving-shop-info">TEL INFO</span>
-                        <div className="diving-shop-map"></div>
-                    </div>
-                </div>
+
+
+                <DivingAreas areas={this.props.areas} />
+                
             </div>
         );
     }
 }
 
 App.defaultProps = {
-    areas: {
-        "Area 1":  [{name:"shop 1"}], "Area 2":[]},
-   
+    areas: [
+        {
+            name: "Area 1",
+            locations:
+                [
+                    {
+                        name: "shop 1",
+                        info:
+                        {
+                            tel: "0800YES",
+                            map: ""
+                        }
+                    }]
+        },
+        { name: "Area 2", locations: [{ name: "shop 2", info: { tel: "0800YES", map: "" } }] },
+    ]
 };
 
 export default App;

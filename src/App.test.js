@@ -49,7 +49,7 @@ it('has a blurb with content and class', () => {
 
 it('has hidden areas on startup', () => {
 	const div = document.createElement('div');
-	ReactDOM.render(<App />,div);
+    ReactDOM.render(<App />, div);
 	var areas = div.getElementsByClassName("diving-area")
 	expect(areas!=null).toEqual(true);
     expect(areas.length > 0).toEqual(true);
@@ -59,7 +59,30 @@ it('has hidden areas on startup', () => {
 it("has dive shops in areas", () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);
-    var areas = div.getElementsByClassName("diving-area")
+    var areas = Array.from(div.getElementsByClassName("diving-area"));
     expect((areas[0].getElementsByClassName("diving-shop")).length).toEqual(1);
 });
+
+it("lists shop2 and tel number", () => {
+    const testA = [
+        {
+            name: "a1",
+            locations: [
+                {
+                    name: "shop 2",
+                    info: {
+                        tel: "face",
+                        map: ""
+                    }
+                }
+            ]
+        }
+    ];
+    const div = document.createElement('div');
+    ReactDOM.render(<App areas={testA} />, div);
+    var DV = div.getElementsByClassName("diving-shop-info");
+    expect(DV.length).toBeGreaterThan(0);
+    var sut =DV[DV.length-1];
+    expect(sut.textContent).toEqual("face");
+})
 
