@@ -38,6 +38,22 @@ it('has clickable links for areas', () => {
     }
 });
 
+
+
+
+it("shows diving area panel when LI is clicked", () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    var litem = div.getElementsByTagName("LI")[0];
+    litem.firstChild.click();
+
+    var areas = div.getElementsByClassName("diving-area")
+    expect(areas != null).toEqual(true);
+    expect(areas.length > 0).toEqual(true);
+    expect(areas[0].style.visibility).not.toEqual("hidden");//.toHaveProperty('style', { "visibility": "hidden" })
+ 
+})
+
 it('has a blurb with content and class', () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);
