@@ -1,9 +1,7 @@
 ﻿import React, { Component } from 'react';
 import './App.css';
 
-const style = {
-    visibility: "hidden"
-};
+
 const imgMapStyle = {
     width: 50,
     height: 50
@@ -20,14 +18,23 @@ class DivingShop extends Component {
 
     }
     render() {
+        let op = (thing) => {
+            if (thing != undefined || thing != null) return thing;
+            return "";
+        }
         let item = this.props.item;
+        console.log("item:");
+        console.log(item);
         if(item.hasOwnProperty("info")) return (
                 <div className="diving-shop">
-                    <div className="diving-shop-title">{item.name}</div>
-                    <div className="diving-shop-info"><span className="tel-icon">{item.info.tel}</span></div>
-                    <div className="diving-shop-map">
-                        <img className="diving-shop-map" src={item.info.map} style={imgMapStyle} alt={str.map} />
-                    </div>
+                <div className="diving-shop-title">{item.name}</div>
+                <div className="diving-shop-info">
+                    <span className="tel-icon">{item.info.tel}</span>
+                    <span className="whatsapp-icon">{op(item.info.whatsapp)}</span>
+                </div>
+                <div className="diving-shop-map">
+                    <img className="diving-shop-map" src={item.info.map} style={imgMapStyle} alt={str.map} />
+                </div>
                 </div>
         );
     }

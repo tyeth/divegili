@@ -6,8 +6,7 @@
     <ProjectGuid>{c24c54dc-6fdb-422a-9de7-b3a6e4a8b4ff}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectView>ShowAllFiles</ProjectView>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>node_modules\react-scripts\bin\react-scripts.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
@@ -16,6 +15,7 @@
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
     <StartWebBrowser>True</StartWebBrowser>
     <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <ScriptArguments>start</ScriptArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -29,10 +29,6 @@
     <Content Include="dive-gili.njsproj" />
     <Content Include="diving_submit.jsx" />
     <Content Include="text.jsx" />
-    <None Include="wallaby-jasmine-1.3.js" />
-    <None Include="wallaby-jasmine-2.js" />
-    <None Include="wallaby-mocha.js" />
-    <None Include="wallaby-qunit.js" />
     <Content Include="public\index.html" />
     <Content Include="public\favicon.ico" />
     <Content Include="public\manifest.json" />

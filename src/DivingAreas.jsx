@@ -3,29 +3,29 @@ import logo from './logo.svg';
 import './App.css';
 import DivingArea from './DivingArea';
 
-const style = {
-    visibility: "hidden"
-};
-
 const str = {
     divingAREAS: "Diving Areas",
     map: "map",
 
 }
 
-class DivingAreas extends Component {
+export class DivingAreas extends Component {
     constructor(props) {
         super(props);
-
     }
+
     render() {
+        // this would be better as a className instead to avoid having to potentially override the original display value 
+        let tstyle = { display: this.props.selected != null ? '' : 'none' };
+        let self = this;
+        console.log("rendereD areas (" + tstyle.visibility + "," + this.props.selected + ")");
         if (this.props.areas != null /*&& this.props.areas.hasOwnProperty("length") && this.props.areas.length > 0*/)
             return (
-                <div className="diving-areas" style={style} >
+                <div className="diving-areas" style={tstyle} >
                     <h2>{str.divingAREAS}</h2>
                     {
                         [].map.call(this.props.areas, (item, i) => {
-                            return <DivingArea item={item} />
+                            return <DivingArea item={item} selected={self.props.selected} />
                         })
                     }
                 </div>

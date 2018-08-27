@@ -5,18 +5,20 @@ const style = {
     visibility: "hidden"
 };
 
-class DivingAreasList extends Component {
+export class DivingAreasList extends Component {
     constructor(props) {
         super(props);
-
+        
     }
+   
     render() {
         let list = this.props.areas;
+        let self = this;
         return (
             <ul className="diving-area-list">
                 {[].map.call(list, function (item, i) {
                     if (item.hasOwnProperty("name")) {
-                        return (<li className="diving-area-li"><a href="#">{item.name}</a></li>)
+                        return (<li className="diving-area-li"><a href="#" onClick={self.props.selectArea} >{item.name}</a></li>)
                     }
                 })
                 }
