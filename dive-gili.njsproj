@@ -29,10 +29,6 @@
     <Content Include="dive-gili.njsproj" />
     <Content Include="diving_submit.jsx" />
     <Content Include="text.jsx" />
-    <None Include="wallaby-jasmine-1.3.js" />
-    <None Include="wallaby-jasmine-2.js" />
-    <None Include="wallaby-mocha.js" />
-    <None Include="wallaby-qunit.js" />
     <Content Include="public\index.html" />
     <Content Include="public\favicon.ico" />
     <Content Include="public\manifest.json" />
