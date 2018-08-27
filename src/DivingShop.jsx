@@ -13,8 +13,8 @@ const str = {
 }
 
 class DivingShop extends Component {
-    constructor(props,state) {
-        super(props,state);
+    constructor(props) {
+        super(props);
 
     }
     render() {
@@ -23,9 +23,11 @@ class DivingShop extends Component {
             return "";
         }
         let item = this.props.item;
+        console.log("item:");
+        console.log(item);
         if(item.hasOwnProperty("info")) return (
                 <div className="diving-shop">
-                    <div className="diving-shop-title">{item.name}</div>
+                <div className="diving-shop-title">{item.name}</div>
                 <div className="diving-shop-info">
                     <span className="tel-icon">{item.info.tel}</span>
                     <span className="whatsapp-icon">{op(item.info.whatsapp)}</span>

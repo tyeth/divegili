@@ -9,22 +9,23 @@ const str = {
 
 }
 
-class DivingAreas extends Component {
+export class DivingAreas extends Component {
     constructor(props) {
         super(props);
-        this.state = {selected: this.props.selected}
     }
+
     render() {
-        let tstyle = { visibility: this.state.selected != null ? 'normal' : 'hidden' };
+        // this would be better as a className instead to avoid having to potentially override the original display value 
+        let tstyle = { display: this.props.selected != null ? '' : 'none' };
         let self = this;
-        console.log("rendereD areas (" + tstyle.visibility + "," + this.state.selected + ")");
+        console.log("rendereD areas (" + tstyle.visibility + "," + this.props.selected + ")");
         if (this.props.areas != null /*&& this.props.areas.hasOwnProperty("length") && this.props.areas.length > 0*/)
             return (
                 <div className="diving-areas" style={tstyle} >
                     <h2>{str.divingAREAS}</h2>
                     {
                         [].map.call(this.props.areas, (item, i) => {
-                            return <DivingArea item={item} selected={self.state.selected} />
+                            return <DivingArea item={item} selected={self.props.selected} />
                         })
                     }
                 </div>

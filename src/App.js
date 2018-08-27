@@ -10,17 +10,20 @@ const style = {
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { selected: undefined };
+        this.state = { selected: null };
 
         this.selectArea = this.selectArea.bind(this);
 
     }
 
     selectArea(e) {
-        console.log("selected STATE " +this.state.selected);
-        this.setState({ selected: e.target.textContent });
-        console.log("updated selected: " + e.target.textContent);
-        console.log("selected STATE " +this.state.selected);
+        let ev = e.target.textContent;
+        console.log("selected STATE " + this.state.selected);
+        this.setState({ selected: ev });
+        console.log("updated selected: " +ev);
+        console.log("selected STATE " + this.state.selected);
+        e.preventDefault();
+        return false;
     }
 
     render() {
