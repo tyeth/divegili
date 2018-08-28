@@ -61,10 +61,7 @@ class DivingShop extends Component {
 //                address: "1 Lucky Lane, Example Hill, FakeTown, UK. BS01 2AB"
 //            }]
 //        },
-
-
 //    }
-
 //};
 
 export default DivingShop;

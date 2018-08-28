@@ -47,15 +47,12 @@ it("shows diving area panel when LI is clicked", () => {
     ReactDOM.render(<App />, div);
     var litem = div.getElementsByTagName("LI")[0];
     var aaele = litem.firstChild;
-    console.log(aaele);
-     //   aaele.click();
     TestUtils.Simulate.click(aaele);
     
         var areas = div.getElementsByClassName("diving-area")
         expect(areas != null).toEqual(true);
         expect(areas.length > 0).toEqual(true);
     expect(areas[0].style.display).not.toEqual("none");
-    //.toHaveProperty('style', { "visibility": "hidden" })
    
  
 })
