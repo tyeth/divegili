@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import  TestUtils  from 'react-dom/test-utils';
 import App from './App';
 
 it('renders without crashing', () => {
@@ -45,12 +46,16 @@ it("shows diving area panel when LI is clicked", () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);
     var litem = div.getElementsByTagName("LI")[0];
-    litem.firstChild.click();
+    var aaele = litem.firstChild;
+    console.log(aaele);
+     //   aaele.click();
+    TestUtils.Simulate.click(aaele);
     
         var areas = div.getElementsByClassName("diving-area")
         expect(areas != null).toEqual(true);
         expect(areas.length > 0).toEqual(true);
-        expect(areas[0].style.display).not.toEqual("none");//.toHaveProperty('style', { "visibility": "hidden" })
+    expect(areas[0].style.display).not.toEqual("none");
+    //.toHaveProperty('style', { "visibility": "hidden" })
    
  
 })
