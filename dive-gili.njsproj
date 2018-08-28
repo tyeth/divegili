@@ -51,6 +51,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\DivingShopSites.test.js" />
+    <Compile Include="src\DivingShopSites.jsx" />
     <Compile Include="src\DivingShop.jsx" />
     <Compile Include="src\DivingAreasList.jsx" />
     <Compile Include="src\DivingArea.jsx" />
