@@ -13,13 +13,9 @@ const str = {
 }
 
 class DivingShop extends Component {
-    constructor(props) {
-        super(props);
-
-    }
     render() {
         let op = (thing) => {
-            if (thing != undefined || thing != null) return thing;
+            if (thing !== undefined || thing !== null) return thing;
             return "";
         }
         let item = this.props.item;

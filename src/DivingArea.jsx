@@ -3,12 +3,10 @@ import './App.css';
 import DivingShop from './DivingShop';
 
 export class DivingArea extends Component {
-    constructor(props) {
-        super(props);
-    }
+  
     render() {
         let item = this.props.item;
-        let selected = this.props.selected == item.name;
+        let selected = this.props.selected === item.name;
         console.log("rendereD area " + item.name + " (sel:" + selected + ",state.sel:"+ this.props.selected + ")");
         return (
             <div className="diving-area" style={{ display: selected ? '' : 'none' }} data-selected={selected} >

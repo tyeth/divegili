@@ -1,5 +1,4 @@
 ﻿import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DivingArea from './DivingArea';
 
@@ -10,10 +9,6 @@ const str = {
 }
 
 export class DivingAreas extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         // this would be better as a className instead to avoid having to potentially override the original display value 
         let tstyle = { display: this.props.selected != null ? '' : 'none' };

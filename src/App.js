@@ -3,9 +3,6 @@ import logo from './logo.svg';
 import DivingAreas from './DivingAreas';
 import DivingAreasList from './DivingAreasList';
 import './App.css';
-const style = {
-    visibility: "hidden"
-};
 
 class App extends Component {
     constructor(props) {
@@ -18,10 +15,7 @@ class App extends Component {
 
     selectArea(e) {
         let ev = e.target.textContent;
-        console.log("selected STATE " + this.state.selected);
         this.setState({ selected: ev });
-        console.log("updated selected: " +ev);
-        console.log("selected STATE " + this.state.selected);
         e.preventDefault();
         return false;
     }
