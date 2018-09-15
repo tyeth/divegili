@@ -15,7 +15,7 @@
 
 .whatsapp-icon {
     content: '';
-    background-image: url("./logo.svg");
+    background-image: url("https://www-cdn.whatsapp.net/img/v4/whatsapp-logo.svg");
     width: 1em;
     height: 1em;
 }

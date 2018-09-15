@@ -8,4 +8,6 @@ margin: 3px;
 
 .DivingAreasList-li{
     list-style-position: inside;
+
+    list-style: square;
 }

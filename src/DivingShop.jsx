@@ -14,17 +14,18 @@ const str = {
 
 class DivingShop extends Component {
     render() {
-        let op = (thing) => {
+        let op = (thing,defaultValue) => {
             if (thing !== undefined || thing !== null) return thing;
-            return "";
+            if(defaultValue===undefined) defaultValue="";
+            return defaultValue;
         }
         let item = this.props.item;
         if(item.hasOwnProperty("info")) return (
                 <div className="DivingShop">
                 <div className="DivingShop-title">{item.name}</div>
                 <div className="DivingShop-info">
-                    <span className="tel-icon">{item.info.tel}</span>
-                    <span className="whatsapp-icon">{op(item.info.whatsapp)}</span>
+                    <div className="DivingShop-info-tel"><span className="tel-icon"></span>{item.info.tel}</div>
+                    <div className="DivingShop-info-whatsapp" ><span className="whatsapp-icon"></span>{op(item.info.whatsapp, "-No WhatsApp Listed-")}</div>
                 </div>
                 <div className="DivingShop-map">
                     <img className="DivingShop-map-img" src={item.info.map} style={imgMapStyle} alt={str.map} />

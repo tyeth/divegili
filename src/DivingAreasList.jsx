@@ -6,14 +6,16 @@ export class DivingAreasList extends Component {
         let list = this.props.areas;
         let self = this;
         return (
-            <ul className="DivingAreaList-ul">
-                {[].map.call(list, function (item, i) {
-                    if (item.hasOwnProperty("name")) {
-                        return (<li className="DivingAreaList-li"><a className="DivingAreaList-a" href="#shop" onClick={self.props.selectArea} >{item.name}</a></li>)
+            <div className="DivingAreasList">
+                <ul className="DivingAreasList-ul">
+                    {[].map.call(list, function (item, i) {
+                        if (item.hasOwnProperty("name")) {
+                            return (<li className="DivingAreasList-li"><a className="DivingAreasList-a" href="#shop" onClick={self.props.selectArea} >{item.name}</a></li>)
+                        }
+                    })
                     }
-                })
-                }
-            </ul>            
+                </ul>
+            </div>
         );
     }
 }
