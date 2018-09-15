@@ -1,0 +1,25 @@
+.DivingShop {
+    margin: 3px;
+}
+
+.DivingShop-title {}
+
+.DivingShop-info {}
+
+.tel-icon {
+    content: '';
+    background-image: url("./logo.svg");
+    width: 1em;
+    height: 1em;
+}
+
+.whatsapp-icon {
+    content: '';
+    background-image: url("./logo.svg");
+    width: 1em;
+    height: 1em;
+}
+
+.DivingShop-map {}
+
+.DivingShop-map-img {}

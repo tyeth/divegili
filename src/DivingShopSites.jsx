@@ -7,7 +7,7 @@ export class DivingShopSites extends Component {
         super(props);
     }
     render() {
-        return <h3>SomeDays Dives</h3>;
+        return <h3 className="DivingShopSites-h3">SomeDays Dives</h3>;
 
         //let item = this.props.item;
         //let selected = this.props.selected == item.name;

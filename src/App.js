@@ -48,13 +48,23 @@ App.defaultProps = {
             locations:
                 [
                     {
-                        name: "shop 1",
+                        name: "shop 1a",
                         info:
                         {
                             tel: "0800YES",
                             map: ""
                         }
-                    }]
+                    }
+                ,
+                {
+                    name: "shop 1b",
+                    info:
+                    {
+                        tel: "0800YES",
+                        map: ""
+                    }
+                }
+                ]
         },
         { name: "Area 2", locations: [{ name: "shop 2", info: { tel: "0800YES", map: "" } }] },
         {

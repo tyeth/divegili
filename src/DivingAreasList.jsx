@@ -6,10 +6,10 @@ export class DivingAreasList extends Component {
         let list = this.props.areas;
         let self = this;
         return (
-            <ul className="diving-area-list">
+            <ul className="DivingAreaList-ul">
                 {[].map.call(list, function (item, i) {
                     if (item.hasOwnProperty("name")) {
-                        return (<li className="diving-area-li"><a href="#shop" onClick={self.props.selectArea} >{item.name}</a></li>)
+                        return (<li className="DivingAreaList-li"><a className="DivingAreaList-a" href="#shop" onClick={self.props.selectArea} >{item.name}</a></li>)
                     }
                 })
                 }

@@ -1,0 +1,11 @@
+.DivingAreasList {
+margin: 3px;
+}
+
+.DivingAreasList-ul{
+    list-style: image-set("./logo.svg")
+}
+
+.DivingAreasList-li{
+    list-style-position: inside;
+}

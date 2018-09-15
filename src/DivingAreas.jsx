@@ -16,8 +16,8 @@ export class DivingAreas extends Component {
         //console.log("rendereD areas (" + tstyle.visibility + "," + this.props.selected + ")");
         if (this.props.areas != null /*&& this.props.areas.hasOwnProperty("length") && this.props.areas.length > 0*/)
             return (
-                <div className="diving-areas" style={tstyle} >
-                    <h2>{str.divingAREAS}</h2>
+                <div className="DivingAreas" style={tstyle} >
+                    <h2 className="DivingAreas-h2">{str.divingAREAS}</h2>
                     {
                         [].map.call(this.props.areas, (item, i) => {
                             return <DivingArea item={item} selected={self.props.selected} />

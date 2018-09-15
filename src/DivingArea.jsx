@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import './App.css';
+import './DivingArea.css';
 import DivingShop from './DivingShop';
 
 export class DivingArea extends Component {
@@ -9,7 +9,7 @@ export class DivingArea extends Component {
         let selected = this.props.selected === item.name;
         //console.log("rendereD area " + item.name + " (sel:" + selected + ",state.sel:"+ this.props.selected + ")");
         return (
-            <div className="diving-area" style={{ display: selected ? '' : 'none' }} data-selected={selected} >
+            <div className="DivingArea" style={{ display: selected ? '' : 'none' }} data-selected={selected} >
                 {[].map.call(item.locations, (NEWITEM, i) => {
                     return (
                         <DivingShop item={NEWITEM} />
