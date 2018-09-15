@@ -3,7 +3,7 @@ margin: 3px;
 }
 
 .DivingAreasList-ul{
-    list-style: image-set("./logo.svg")
+    list-style: square;
 }
 
 .DivingAreasList-li{

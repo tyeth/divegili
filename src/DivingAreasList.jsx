@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import './App.css';
+import './DivingAreasList.css';
 
 export class DivingAreasList extends Component {
     render() {

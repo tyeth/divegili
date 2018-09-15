@@ -1,6 +1,5 @@
 ﻿import React, { Component } from 'react';
-import './App.css';
-import DivingShop from './DivingShop';
+import './DivingShopSites.css';
 
 export class DivingShopSites extends Component {
     constructor(props) {

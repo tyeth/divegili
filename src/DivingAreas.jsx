@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import './App.css';
+import './DivingAreas.css';
 import DivingArea from './DivingArea';
 
 const str = {
