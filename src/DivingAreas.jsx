@@ -13,7 +13,7 @@ export class DivingAreas extends Component {
         // this would be better as a className instead to avoid having to potentially override the original display value 
         let tstyle = { display: this.props.selected != null ? '' : 'none' };
         let self = this;
-        console.log("rendereD areas (" + tstyle.visibility + "," + this.props.selected + ")");
+        //console.log("rendereD areas (" + tstyle.visibility + "," + this.props.selected + ")");
         if (this.props.areas != null /*&& this.props.areas.hasOwnProperty("length") && this.props.areas.length > 0*/)
             return (
                 <div className="diving-areas" style={tstyle} >

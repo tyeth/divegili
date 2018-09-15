@@ -19,8 +19,6 @@ class DivingShop extends Component {
             return "";
         }
         let item = this.props.item;
-        console.log("item:");
-        console.log(item);
         if(item.hasOwnProperty("info")) return (
                 <div className="diving-shop">
                 <div className="diving-shop-title">{item.name}</div>
